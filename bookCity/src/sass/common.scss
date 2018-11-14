@@ -1,0 +1,43 @@
+html {
+    font-size: calc(100/320*100vw);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-size: 0.16rem;
+    box-sizing: border-box;
+}
+
+html,
+body,
+.wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: 0.38rem;
+    line-height: 0.38rem;
+    padding: 0 0.15rem;
+    background: #EFEFF0;
+    display: flex;
+    justify-content: space-between;
+    span {
+        i.iconfont {
+            margin-right: 0.1rem;
+        }
+    }
+    .home {
+        font-size: 0.18rem;
+    }
+}

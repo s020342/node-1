@@ -1,0 +1,20 @@
+@charset "utf-8";
+@import './common.scss';
+section {
+    flex: 1;
+    overflow-y: scroll;
+    .c_txt {
+        width: 100%;
+        height: auto;
+        li {
+            height: 0.5rem;
+            line-height: 0.5rem;
+            border-bottom: thin solid #f5f5f5;
+            padding: 0 0.15rem;
+            color: #555555;
+            &.col {
+                color: #F6823D;
+            }
+        }
+    }
+}

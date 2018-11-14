@@ -1,0 +1,374 @@
+@charset "utf-8";
+html {
+    font-size: calc(100/320*100vw);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-size: 0.14rem;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    width: 100%;
+    height: 0.38rem;
+    background: #EFEFF0;
+    display: flex;
+    justify-content: space-between;
+    line-height: 0.38rem;
+    padding: 0 0.15rem;
+    border-bottom: thin solid #BABABB;
+    ul {
+        display: flex;
+        li {
+            margin: 0 0.15rem;
+            &.cur {
+                color: #FB8E26;
+                border-bottom: 0.02rem solid#FB8E26;
+            }
+        }
+    }
+    a {
+        color: #FB8E26;
+        i.iconfont {
+            font-size: 0.18rem;
+            color: #A4A4A4;
+        }
+    }
+}
+
+section {
+    flex: 1;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.b-scroll {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.b-scroll:before {
+    content: attr(data-top);
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: -0.52rem;
+    margin: 0 auto;
+    width: 100%;
+    background: #FFC0CB;
+}
+
+.b-scroll:after {
+    content: attr(data-bot);
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    display: block;
+    position: absolute;
+    bottom: -0.52rem;
+    margin: 0 auto;
+    width: 100%;
+    background: #FFC0CB;
+}
+
+.top {
+    width: 100%;
+    height: auto;
+    padding: 0.15rem 0.15rem 0 0.15rem;
+    border-bottom: 0.1rem solid #DDDDDD;
+    .search {
+        width: 100%;
+        height: 0.38rem;
+        border: thin solid #ccc;
+        display: flex;
+        justify-content: space-between;
+        i.iconfont {
+            width: 0.5rem;
+            height: auto;
+            display: block;
+            text-align: center;
+            font-size: 0.2rem;
+            line-height: 0.38rem;
+        }
+        input {
+            flex: 1;
+            border: none;
+            outline: none;
+        }
+    }
+}
+
+.classify {
+    width: 100%;
+    height: 0.9rem;
+    padding-top: .15rem;
+    ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        li {
+            text-align: center;
+            i.iconfont {
+                width: .35rem;
+                height: .35rem;
+                border-radius: 50%;
+                color: #fff;
+                display: block;
+                text-align: center;
+                line-height: .35rem;
+                font-size: .18rem;
+            }
+            p {
+                margin-top: .08rem;
+            }
+            &:nth-of-type(1) {
+                i.iconfont {
+                    background: #FB565A;
+                }
+            }
+            &:nth-of-type(2) {
+                i.iconfont {
+                    background: #F270A7;
+                }
+            }
+            &:nth-of-type(3) {
+                i.iconfont {
+                    background: #2AC9C7;
+                }
+            }
+            &:nth-of-type(4) {
+                i.iconfont {
+                    background: #2DCB74;
+                }
+            }
+            &:nth-of-type(5) {
+                i.iconfont {
+                    background: #FF942B;
+                }
+            }
+        }
+    }
+}
+
+.bottom {
+    width: 100%;
+    height: auto;
+    .hot {
+        width: 100%;
+        height: auto;
+        h5 {
+            height: 0.35rem;
+            line-height: 0.35rem;
+            border-left: 0.05rem solid #FF6600;
+            width: 100%;
+            padding-left: 0.1rem;
+            border-bottom: thin solid #ccc;
+        }
+        .hot-books {
+            width: 100%;
+            height: auto;
+            padding: 0.1rem 0.15rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            dl {
+                width: 30%;
+                text-align: center;
+                margin-bottom: 0.15rem;
+            }
+        }
+    }
+    .recommend {
+        width: 100%;
+        height: auto;
+        border-top: 0.1rem solid #DDDDDD;
+        h6 {
+            height: 0.35rem;
+            line-height: 0.35rem;
+        }
+        dl {
+            width: 100%;
+            height: auto;
+            padding: 0 0.15rem 0.15rem 0.15rem;
+            display: flex;
+            img {
+                width: 0.8rem;
+                height: auto;
+            }
+            dd {
+                margin-left: 0.15rem;
+                h5 {
+                    color: #999999;
+                    line-height: 0.25rem;
+                }
+                .author {
+                    line-height: 0.25rem;
+                    color: #939393;
+                }
+                .text {
+                    font-size: 0.12rem;
+                    color: #555;
+                    margin-bottom: 0.08rem;
+                }
+                ul {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                    li {
+                        flex-shrink: 0;
+                        padding: 0 0.05rem;
+                        border: thin solid #A9D5BE;
+                        color: #A9D5BE;
+                        border-radius: 0.05rem;
+                        margin-right: 0.1rem;
+                        margin-bottom: 0.1rem;
+                    }
+                }
+            }
+        }
+        .chapter {
+            width: 100%;
+            height: auto;
+            li {
+                width: 100%;
+                height: 0.5rem;
+                line-height: 0.5rem;
+                border-top: thin solid #f7f7f7;
+                padding: 0 0.15rem;
+                color: #4B4B4B;
+            }
+        }
+        .change {
+            height: 0.5rem;
+            width: 100%;
+            line-height: 0.5rem;
+            text-align: center;
+            border-top: thin solid #F6ECD9;
+            border-bottom: thin solid #F6ECD9;
+        }
+    }
+    .books {
+        width: 100%;
+        height: auto;
+        border-top: 0.1rem solid #DDDDDD;
+        dl {
+            width: 100%;
+            height: auto;
+            padding: 0.15rem;
+            display: flex;
+            border-bottom: thin solid #f7f7f7;
+            img {
+                width: 0.8rem;
+                height: auto;
+            }
+            dd {
+                margin-left: 0.15rem;
+                h5 {
+                    color: #999999;
+                    line-height: 0.25rem;
+                }
+                .author {
+                    line-height: 0.25rem;
+                    color: #939393;
+                }
+                .text {
+                    font-size: 0.12rem;
+                    color: #555;
+                    margin-bottom: 0.08rem;
+                }
+                ul {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                    li {
+                        flex-shrink: 0;
+                        padding: 0 0.05rem;
+                        border: thin solid #A9D5BE;
+                        color: #A9D5BE;
+                        border-radius: 0.05rem;
+                        margin-right: 0.1rem;
+                        margin-bottom: 0.1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.soso {
+    width: 100%;
+    height: auto;
+    padding: 0.15rem 0.15rem 0 0.15rem;
+    display: flex;
+    .search {
+        width: 100%;
+        height: 0.38rem;
+        border: thin solid #ccc;
+        display: flex;
+        justify-content: space-between;
+        i.iconfont {
+            width: 0.5rem;
+            height: auto;
+            display: block;
+            text-align: center;
+            font-size: 0.2rem;
+            line-height: 0.38rem;
+        }
+        input {
+            flex: 1;
+            border: none;
+            outline: none;
+        }
+    }
+    a {
+        display: block;
+        width: .5rem;
+        height: 0.38rem;
+        border: thin solid #ccc;
+        margin-left: .1rem;
+        text-align: center;
+        line-height: 0.38rem;
+    }
+}
+
+.books-all {
+    width: 100%;
+    padding: 0 0.15rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.15rem;
+}
+
+footer {
+    width: 100%;
+    height: 0.38rem;
+    background: #ccc;
+}

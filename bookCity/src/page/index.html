@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/fonts/iconfont.css">
+
+    <link rel="stylesheet" href="/static/css/swiper.min.css">
+
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <a href="">签</a>
+            <ul class="book-head">
+                <li class="cur">书城</li>
+                <li>书架</li>
+            </ul>
+            <a href=""><i class="iconfont icon-wode"></i></a>
+        </header>
+        <section>
+
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide wrapper">
+                        <div class="b-scroll" data-top="下拉刷新" data-bot="上拉加载">
+                            <!-- 顶部轮播 -->
+                            <div class="top">
+                                <div class="search" id="indexSearch">
+                                    <i class="iconfont icon-fangdajing"></i>
+                                    <input type="text" placeholder="请输入书名、作者、关键字">
+                                </div>
+                                <script type="text/x-handlebars-template" id="top_banner">
+
+                                    <ul>
+                                        {{#each this}}
+                                        <li class="articleClassGo" id="{{this.id}}">
+                                            <img class="iconfont" src="{{this.ad_copy}}" />
+                                            <p>{{this.ad_name}}</p>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                </script>
+                                <div class="classify">
+                                </div>
+                            </div>
+
+                            <div class="bottom">
+                                <!-- 本周最火 -->
+                                <script type="text/x-handlebars-template" id="hot">
+                                    <h5>{{this.ad_name}}</h5>
+                                    <div class="hot-books">
+                                        {{#each this.data.data}}
+                                        <dl>
+                                            <dt style="width: 100%;height: 1.26rem;"><img style="width: 100%" src="{{this.cover}}" alt=""></dt>
+                                            <dd>
+                                                {{this.title}}
+                                            </dd>
+                                        </dl>
+                                        {{/each}}
+                                    </div>
+                                </script>
+                                <div class="hot">
+
+                                </div>
+
+                                <!-- 重磅推荐 -->
+                                <script type="text/x-handlebars-template" id="more">
+                                    {{#each this}}
+                                    <div class="recommend">
+                                        <h6>{{this.ad_name}}</h6>
+                                        <dl>
+                                            <dt><img src="{{this.data.data.[0].cover}}" alt=""></dt>
+                                            <dd>
+                                                <h5>{{this.data.data.[0].title}}</h5>
+                                                <p class="author">{{this.data.data.[0].authors}}</p>
+                                                <p class="text">{{this.data.data.[0].summary}}</p>
+                                                <ul>
+
+                                                    {{#each this.data.data.[0].tags}}
+                                                    <li>{{this}}</li>
+                                                    {{/each}}
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <ul class="chapter">
+                                            {{#each this.data.data}} {{#testif this @index 5 1}}
+                                            <li>{{this.list}}、{{this.title}}</li>
+                                            {{/testif}} {{/each}}
+
+                                        </ul>
+                                        <p class="change change{{@index}}">换一换</p>
+
+
+                                    </div>
+
+                                    {{/each}}
+
+
+                                </script>
+                                <div class="more">
+
+                                </div>
+
+                                <script id="books" type="text/x-handlebars-template">
+                                    {{#each this}}
+                                    <dl>
+                                        <dt><img src="{{this.cover}} " alt=" "></dt>
+                                        <dd>
+                                            <h5>{{this.title}}</h5>
+                                            <p class="author ">{{this.authors}}</p>
+                                            <p class="text ">{{this.summary}}</p>
+                                            <ul>
+                                                {{#each this.tags}}
+                                                <li>{{this}}</li>
+                                                {{/each}}
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                    {{/each}}
+                                </script>
+                                <div class="books ">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ">
+                        <div class="soso ">
+                            <div class="search ">
+                                <i class="iconfont icon-fangdajing "></i>
+                                <input type="text " placeholder="请输入书名、作者、关键字 " class="searchText">
+                            </div>
+                            <a href=" ">
+                                <i class="iconfont icon-gongzuo "></i>
+                            </a>
+                        </div>
+                        <script id="books-all" type="text/x-handlebars-template">
+                            {{#each this}}
+                            <dl style="width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;">
+                                <dt style="width:30%;"><img style="width:100%" src="{{this.cover}}" alt=" "></dt>
+                                <dd>
+                                    {{this.title}}------{{this.authors}}
+                                </dd>
+                            </dl>
+                            {{/each}}
+
+                        </script>
+                        <div class="books-all ">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script id="tpl " type="text/x-handlebars-template ">
+        <div class="demo ">
+            <h1>{{name}}</h1>
+            <p>{{content}}</p>
+        </div>
+    </script>
+
+    <script src="/static/js/utils/require.js "></script>
+    <script src="/js/index/index.js "></script>
+</body>
+
+</html>

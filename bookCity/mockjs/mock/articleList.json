@@ -1,0 +1,60 @@
+[
+
+
+    {
+        "ad": 0,
+        "word_count": 110292,
+        "owner": 0,
+        "allow_discount": false,
+        "ad_time": 0,
+        "click": 10756109,
+        "free_chapter": false,
+        "score_count": 1081,
+        "copyright": "",
+        "title": "老九门",
+        "on_sale": true,
+        "comment_count": 574,
+        "has_ad": 0,
+        "ad_duration": 0,
+        "content": "民国时期，长沙车站开来一辆来历不明的火车，彻查发现来自一座深山中的百年矿山，因为常年开采导致地皮塌陷，矿山中弥漫着一股奇怪的浓雾，长沙老九门盗墓家族张家和红家经过了一番查探，发现了深埋矿山之下，有着另外一个秘密，经过一番探险，他们深入矿山之中，来到矿山的底部，看到了让人无法置信的景象。千年之前坠落的三颗陨石，长白山下埋藏的秘密，他们到底从矿山底部带出了什么东西，为何世界慢慢变的异样诡异？",
+        "latest_id": 76,
+        "score": 7.95,
+        "allow_free_read": 1,
+        "fiction_id": 46525,
+        "items": [{
+                "title": "第一章 鬼车",
+                "price": 0,
+                "chapter_id": 1,
+                "html_sha1": "68284",
+                "word_count": 1440,
+                "free": true
+            },
+            {
+                "title": "第二章 齐铁嘴",
+                "price": 0,
+                "chapter_id": 2,
+                "html_sha1": "a2b4a",
+                "word_count": 1210,
+                "free": true
+            },
+            {
+                "title": "第三章 甲東四墓",
+                "price": 0,
+                "chapter_id": 3,
+                "html_sha1": "eeaa3",
+                "word_count": 1983,
+                "free": true
+            },
+            {
+                "title": "第四章 最后一节车厢",
+                "price": 0,
+                "chapter_id": 4,
+                "html_sha1": "5e352",
+                "word_count": 1741,
+                "free": true
+            }
+        ]
+    }
+
+
+]

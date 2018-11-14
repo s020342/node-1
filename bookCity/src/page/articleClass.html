@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/fonts/iconfont.css">
+
+</head>
+
+<body>
+    <script id="wrap" type="text/x-handlebars-template">
+        <header>
+            <span><a href="/page/index.html"><i class="iconfont icon-xiangzuo"></i></a>{{this.ad_setting_name}}</span>
+            <i class="iconfont home icon-shouye"></i>
+        </header>
+        <section>
+            <div class="follow">
+                <h5>最受关注</h5>
+                <div class="f_books"></div>
+                {{#each this.items.[0].data.data}}
+                <dl style="display: flex;" class="goDetail" id="{{this.fiction_id}}">
+                    <dt style="width: 30%;"><img style="width: 100%" src="{{this.cover}}" alt=""></dt>
+                    <dd>{{this.title}}</dd>
+                </dl>
+                {{/each}}
+            </div>
+        </section>
+    </script>
+
+    <div class="wrap">
+    </div>
+    <script src="/static/js/utils/require.js "></script>
+    <script src="/js/articleClass/index.js "></script>
+</body>
+
+</html>

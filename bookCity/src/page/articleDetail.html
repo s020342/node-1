@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/fonts/iconfont.css">
+
+    <link rel="stylesheet" href="/css/detail.css">
+</head>
+
+<body>
+
+
+    <script id="wrap" type="text/x-handlebars-template">
+        <header>
+            <span><i class="iconfont icon-xiangzuo"></i>详情</span>
+            <i class="iconfont home icon-shouye"></i>
+        </header>
+        <section>
+            <div class="detailPage">
+                <dl>
+                    <dt>
+                                        <img src="{{this.cover}}" alt="">
+                                    </dt>
+                    <dd>
+                        <h4>{{this.title}}</h4>
+                        <h6>南{{this.authors}}</h6>
+                        <h5>{{this.comment_count}}个评价</h5>
+                        <p>价格：{{this.price}}书币/千字</p>
+                        <p>字数：{{this.word_count}}字 <span>连载中</span></p>
+                    </dd>
+                </dl>
+                <p class="startRead">
+                    <a href="#" class="col">开始阅读</a>
+                    <a href="#" class="download">下载</a>
+                </p>
+                <p class="txt">
+                    {{this.summary}}
+                </p>
+
+            </div>
+            <h5 class="new_txt">
+                最新：{{this.latest}}
+            </h5>
+            <div class="label">
+                <h5>类别标签</h5>
+                <ul>
+                    {{#each this.tags}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+
+            <div class="books">
+                {{#each this.categories}}
+                <dl>
+
+                    <dd>{{this.label}}</dd>
+                </dl>
+                {{/each}}
+
+
+            </div>
+            <div class="book_info">
+                <p>图书信息</p>
+                <p>版权：阅文集团旗下起点中文网</p>
+            </div>
+        </section>
+
+    </script>
+    <div class="wrap">
+    </div>
+    <script src="/static/js/utils/require.js "></script>
+    <script src="/js/articleDetail/index.js "></script>
+</body>
+
+</html>

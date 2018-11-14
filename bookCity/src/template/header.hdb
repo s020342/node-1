@@ -1,0 +1,6 @@
+<script id="title" type="text/x-handlebars-template">
+    <div class="demo">
+        <h1>{{name}}</h1>
+        <p>{{content}}</p>
+    </div>
+</script>

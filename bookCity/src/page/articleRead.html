@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/fonts/iconfont.css">
+    <link rel="stylesheet" href="/css/read.css">
+</head>
+
+<body>
+    <script id="read-container" type="text/x-handlebars-template">
+
+        <div class="read-content">
+            <h2>{{this.t}}</h2>
+            <div>{{this.p}}</div>
+        </div>
+        <div class="read-mark-h">
+            <i class="icon iconfont icon-angle-left"></i>返回
+        </div>
+        <div class="read-mark-f">
+            <div class="read-mark-control">
+                <div class="read-mark-prev">上一章</div>
+                <div class="read-mark-page">1/66</div>
+                <div class="read-mark-next">下一章</div>
+            </div>
+            <ul class="read-list">
+                <li class="read-catalog">
+                    <i class="icon iconfont icon-gengduo-2"></i>
+                    <p>目录</p>
+                </li>
+                <li class="read-font">
+                    <i class="icon">Aa</i>
+                    <p>字体</p>
+                </li>
+                <li class="read-night">
+                    <div>
+                        <i class="icon iconfont icon-pingfen night"></i>
+                        <i class="icon iconfont icon-05 daytime"></i>
+                    </div>
+                    <p>夜间</p>
+                </li>
+                <li class="read-download">
+                    <i class="icon iconfont icon-xiazai"></i>
+                    <p>下载</p>
+                </li>
+                <div class="read-control-color">
+                    <div class="read-control-color-t">
+                        字号<span class="read-big">大</span><span class="read-small">小</span>
+                    </div>
+                    <div class="read-control-color-b">
+                        <b>背景</b> <span class="read-control-color-b-span"></span>
+                        <span class="read-control-color-b-span"></span>
+                        <span class="read-control-color-b-span"></span>
+                        <span class="read-control-color-b-span"></span>
+                        <span class="read-control-color-b-span"></span>
+                        <span class="read-control-color-b-span"></span>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </script>
+    <div class="read-container">
+    </div>
+    <script src="/static/js/utils/require.js "></script>
+    <script src="/js/articleRead/index.js "></script>
+</body>
+
+</html>
